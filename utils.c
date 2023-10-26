@@ -6,12 +6,33 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:23:12 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/26 17:44:50 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/26 18:17:57 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
+
+static char	*ft_invert(char *str)
+{
+	int		i;
+	int		len;
+	char	tmp;
+
+	i = 0;
+	len = ft_strlen(str);
+	if (str[i] == '-')
+		i++;
+	while (i < len)
+	{
+		tmp = str[i];
+		str[i] = str[len - 1];
+		str[len - 1] = tmp;
+		i++;
+		len--;
+	}
+	return (str);
+}
 
 static int	ft_unsignedlen(unsigned int n)
 {
@@ -43,7 +64,7 @@ char	*ft_uitoa(unsigned int n)
 		len++;
 	}
 	rep[len] = '\0';
-	return (rep);
+	return (ft_invert(rep));
 }
 
 static int	ft_hexalen(int nb)
@@ -59,14 +80,17 @@ static int	ft_hexalen(int nb)
 	return (len);
 }
 
-char	*ft_hexitoa(int n)
+char	*ft_hexitoa(int n, int case_t)
 {
 	int		len;
 	char	*rep;
 	char	*hexa;
 
 	len = ft_hexalen(n);
-	hexa = "0123456789abcdef";
+	if (case_t == 0)
+		hexa = "0123456789abcdef";
+	else
+		hexa = "0123456789ABCDEF";
 	rep = (char *) malloc (sizeof(char) * (len + 1));
 	if (!rep)
 		return (NULL);
@@ -78,14 +102,5 @@ char	*ft_hexitoa(int n)
 		len++;
 	}
 	rep[len] = '\0';
-	return (rep);
-}
-
-void	ft_strtoupper(char *str)
-{
-	int	i;
-
-	i = -1;
-	while (str[++i])
-		ft_toupper(str[i]);
+	return (ft_invert(rep));
 }

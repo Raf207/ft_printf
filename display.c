@@ -6,12 +6,13 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:05:13 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/26 17:46:54 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/26 18:18:49 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
+#include <stdio.h>
 
 int	ft_putchar(int c)
 {
@@ -55,15 +56,7 @@ int	ft_puthex(int nb, int case_t)
 	char	*str;
 	int		len;
 
-	if (case_t)
-	{
-		str = ft_hexitoa(nb);
-		ft_strtoupper(str);
-		len = ft_putstr(str);
-		free(str);
-		return (len);
-	}
-	str = ft_hexitoa(nb);
+	str = ft_hexitoa(nb, case_t);
 	len = ft_putstr(str);
 	free(str);
 	return (len);
