@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:05:55 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/18 15:58:04 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:14:00 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	ft_atoi(const char *str)
 // #include <stdlib.h>
 // int	main(void)
 // {
-// 	char rep[] = "984";
+// 	char rep[] = "15465166518131613513516561351";
 // 	(void) rep;
 // 	printf("%d = %d\n", ft_atoi(rep), atoi(rep));
 // }

@@ -8,36 +8,39 @@ AR = ar -rcs
 
 RM = rm -rf
 
-SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
-            ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c \
-            ft_putnbr_fd.c ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c ft_strlcat.c \
-            ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
-            ft_tolower.c ft_toupper.c ft_strlcat.c ft_toupper.c ft_tolower.c
+SRC_DIR = src/
 
-OBJ = *.o
+OBJ_DIR = obj/
 
-SRCBONUS = *_bonus.c
+SRC_FILES = ft_atoi ft_bzero ft_calloc ft_isalnum ft_isalpha ft_isascii ft_isdigit ft_isprint \
+            ft_itoa ft_memchr ft_memcmp ft_memcpy ft_memmove ft_memset ft_putchar_fd ft_putendl_fd \
+            ft_putnbr_fd ft_putstr_fd ft_split ft_strchr ft_strdup ft_striteri ft_strjoin ft_strlcat \
+            ft_strlcpy ft_strlen ft_strmapi ft_strncmp ft_strnstr ft_strrchr ft_strtrim ft_substr \
+            ft_tolower ft_toupper ft_strlcat ft_toupper ft_tolower ft_lstnew_bonus ft_lstadd_front_bonus \
+			ft_lstsize_bonus ft_lstlast_bonus ft_lstadd_back_bonus ft_lstdelone_bonus ft_lstclear_bonus \
+			ft_lstiter_bonus ft_lstmap_bonus
 
-OBJBONUS = *_bonus.o
+OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 
-HEAD = libft.h
+SRC = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))
+
+HEAD = ./include/
 
 all : $(NAME)
 
-$(OBJ) :
-	$(CC) $(CFLAGS) -I $(HEAD) -c $(SRC)
+$(OBJ_DIR)%.o : $(SRC_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
+	@echo "Compiling: $<"
+	@$(CC) $(CFLAGS) -I $(HEAD) -c $< -o $@
 
 $(NAME)	: $(OBJ)
-	$(AR) $(NAME) $(OBJ)
+	@$(AR) $(NAME) $(OBJ)
+	@echo "Libft compiled!"
 
 clean :
-	$(RM) $(OBJ)
+	$(RM) $(OBJ_DIR)
 
 fclean : clean
 	$(RM) $(NAME)
-
-bonus : $(OBJ)
-	$(CC) $(CFLAGS) -I $(HEAD) -c $(SRCBONUS)
-	$(AR) $(NAME) $(OBJ)
 
 re : fclean all

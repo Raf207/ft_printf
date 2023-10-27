@@ -6,12 +6,12 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:47:27 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/26 17:47:27 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:32:51 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
+#include "../libft/include/libft.h"
 
 int	ft_conversion(int c, va_list ap)
 {

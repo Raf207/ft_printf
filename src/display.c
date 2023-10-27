@@ -6,13 +6,12 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:05:13 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/26 18:18:49 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/27 15:32:47 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
-#include <stdio.h>
+#include "../libft/include/libft.h"
 
 int	ft_putchar(int c)
 {
