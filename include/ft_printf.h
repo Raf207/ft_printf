@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:45:28 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/26 18:29:12 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:52:01 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ int		ft_putunsigned(unsigned int nb);
 int		ft_puthex(int nb, int case_t);
 char	*ft_uitoa(unsigned int n);
 char	*ft_hexitoa(int n, int case_t);
+int		ft_putpoint(unsigned long int n);
+char	*ft_invert(char *str);
 
 #endif

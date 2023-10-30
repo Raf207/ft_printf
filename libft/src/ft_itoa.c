@@ -6,14 +6,14 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:27:07 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/26 17:01:42 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:53:48 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_countdigit(long n)
+static int	ft_countdigit(long n)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	ft_countdigit(long n)
 	return (i);
 }
 
-char	*ft_invert(char *str)
+static char	*ft_invert(char *str)
 {
 	int		i;
 	int		len;

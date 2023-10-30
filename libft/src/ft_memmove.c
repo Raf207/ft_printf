@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 16:52:41 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/15 14:32:36 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:54:54 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		while (++i < n)
 			d[n - i - 1] = s[n - i - 1];
 	}
-	else 
+	else
 		ft_memcpy(d, s, n);
 	return (dest);
 }

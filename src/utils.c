@@ -6,14 +6,14 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 17:23:12 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/27 15:32:56 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:51:53 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "../libft/include/libft.h"
 
-static char	*ft_invert(char *str)
+char	*ft_invert(char *str)
 {
 	int		i;
 	int		len;

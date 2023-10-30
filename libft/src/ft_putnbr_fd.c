@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 13:22:29 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/16 13:40:53 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:55:13 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_putnbr_fd(int n, int fd)
 		c = (n % 10) + '0';
 		write(fd, &c, 1);
 	}
-	else 
+	else
 	{
 		c = n + '0';
 		write(fd, &c, 1);

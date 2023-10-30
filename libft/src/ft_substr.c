@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 16:51:36 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/16 15:42:25 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:20:56 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			return (dst);
 		ft_strlcpy(dst, &s[start], len + 1);
 	}
-	else 
+	else
 	{
 		dst = ft_calloc(ft_strlen(&s[start]) + 1, sizeof(char));
 		if (!dst)

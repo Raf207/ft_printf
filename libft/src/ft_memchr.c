@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 21:02:43 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/14 15:20:54 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:31:41 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n - 1 && src[i] != (const char) c)
 		i++;
 	if (src[i] == (char) c)
-		return ((char *) &s[i]);
-	else 
+		return ((char *) &src[i]);
+	else
 		return (NULL);
 }

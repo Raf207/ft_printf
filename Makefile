@@ -14,7 +14,7 @@ SRC_DIR = src/
 
 OBJ_DIR = obj/
 
-SRC_FILES = display my_printf utils
+SRC_FILES = display my_printf utils display_point
 
 OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC_FILES)))
 

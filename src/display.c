@@ -6,7 +6,7 @@
 /*   By: rafnasci <rafnasci@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 16:05:13 by rafnasci          #+#    #+#             */
-/*   Updated: 2023/10/27 15:32:47 by rafnasci         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:18:27 by rafnasci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ int	ft_putstr(char *str)
 
 	count = 0;
 	while (*str)
-		count += ft_putchar(*str++);
+	{
+		if (ft_putchar(*str++) == -1)
+			return (-1);
+		count++;
+	}
 	return (count);
 }
 
